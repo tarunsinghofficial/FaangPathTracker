@@ -33,26 +33,22 @@ export default function Home() {
 
                 let jsonData;
                 try {
-                    jsonData = JSON.parse(text.replace(/NaN/g, '"NaN"'));
+                    jsonData = JSON.parse(text.replace(/NaN/g, '"Medium"'));
                 } catch (parseError) {
                     console.error('JSON Parse Error:', parseError);
                     throw parseError;
                 }
-
-                // Transform and group the data by problem name
                 const problemsMap = new Map<string, Problem>();
 
-                Object.entries(jsonData).forEach(([company, problems]: [string, any[]]) => {
+                Object.entries(jsonData as Record<string, any[]>).forEach(([company, problems]) => {
                     problems.forEach((problem) => {
                         const existingProblem = problemsMap.get(problem.problem_name);
 
                         if (existingProblem) {
-                            // If problem exists, just add the company
                             if (!existingProblem.companies.includes(company)) {
                                 existingProblem.companies.push(company);
                             }
                         } else {
-                            // If problem doesn't exist, create new entry
                             problemsMap.set(problem.problem_name, {
                                 problem_name: problem.problem_name,
                                 problem_link: problem.link,
