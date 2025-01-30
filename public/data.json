@@ -1,0 +1,9 @@
+{
+    "Google": [
+        { "name": "Two Sum", "link": "https://leetcode.com/problems/two-sum" },
+        { "name": "Median of Two Sorted Arrays", "link": "https://leetcode.com/problems/median-of-two-sorted-arrays" }
+    ],
+    "Amazon": [
+        { "name": "Longest Substring Without Repeating Characters", "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters" }
+    ]
+}
