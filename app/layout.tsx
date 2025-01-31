@@ -5,9 +5,9 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { Github } from 'lucide-react';
 import { ClerkProvider } from '@clerk/nextjs';
 const inter = Inter({ subsets: ['latin'] });
+import Script from 'next/script';
 
 import { siteConfig } from './metadata';
-import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -53,6 +53,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <Script async src="https://cloud.umami.is/script.js" data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}></Script>
+        </head>
         <body className={inter.className}>
           <ThemeProvider
             attribute="class"
@@ -62,7 +65,6 @@ export default function RootLayout({
           >
             <div className="relative">
               {children}
-              <Analytics />
               <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
                 <div className="container mx-auto flex flex-col sm:flex-row w-full items-center justify-between gap-4">
                   <p className="text-sm text-gray-500 dark:text-gray-400">
