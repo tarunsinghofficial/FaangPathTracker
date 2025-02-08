@@ -131,6 +131,7 @@ export default function LandingPage() {
                   >
                     Learn More
                   </Button>
+                  <a href="https://www.producthunt.com/posts/faangpreptracker-company-wise-problems?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-faangpreptracker&#0045;company&#0045;wise&#0045;problems" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=860766&theme=light&t=1739003002249" alt="FaangPrepTracker&#0032;&#0045;&#0032;Company&#0032;Wise&#0032;Problems - Leetcode&#0032;company&#0045;wise&#0032;problems | Product Hunt" width="180" height="54" /></a>
                 </div>
                 <div className="flex justify-center py-4  rounded-2xl">
                   <Image src={Hero} alt="Hero Image" width={1000} height={1000} className="rounded-2xl dark:border-white/5 border-2 border-black/5" />
@@ -233,13 +234,14 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-tr from-blue-500 to-white bg-clip-text text-transparent ml-1">FaangPrepTracker</span>.
               </p>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center gap-2">
               <Button
                 onClick={() => router.push('/problems')}
                 className="bg-blue-500 text-white hover:bg-blue-600 inline-flex h-10 items-center justify-center space-x-2"
               >
                 Start Now ✨
               </Button>
+              <a href="https://www.producthunt.com/posts/faangpreptracker-company-wise-problems?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-faangpreptracker&#0045;company&#0045;wise&#0045;problems" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=860766&theme=light&t=1739003002249" alt="FaangPrepTracker&#0032;&#0045;&#0032;Company&#0032;Wise&#0032;Problems - Leetcode&#0032;company&#0045;wise&#0032;problems | Product Hunt" width="180" height="54" /></a>
             </div>
           </div>
         </section>
